@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,7 @@
 		3DE8D6B1243306FF005DF111 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DE8D6AF243306FF005DF111 /* LaunchScreen.storyboard */; };
 		3DE8D6BC243306FF005DF111 /* bbiosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE8D6BB243306FF005DF111 /* bbiosTests.swift */; };
 		3DE8D6C7243306FF005DF111 /* bbiosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE8D6C6243306FF005DF111 /* bbiosUITests.swift */; };
+		3DE8D6D524331153005DF111 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3DE8D6D424331153005DF111 /* GoogleService-Info.plist */; };
 		4B8F275A080E9E4597CB15AC /* Pods_bbios_bbiosUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FA6C8EC1280AE541583C1A8 /* Pods_bbios_bbiosUITests.framework */; };
 		6E2F9B8F1A3316807F0634EF /* Pods_bbios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DB8594DC6311BE77E42E9D1 /* Pods_bbios.framework */; };
 		B71F8AE3DC3E96A40E3F5FC0 /* Pods_bbiosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E79F00B96DEADEC39F6A726D /* Pods_bbiosTests.framework */; };
@@ -53,6 +54,7 @@
 		3DE8D6C2243306FF005DF111 /* bbiosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = bbiosUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DE8D6C6243306FF005DF111 /* bbiosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bbiosUITests.swift; sourceTree = "<group>"; };
 		3DE8D6C8243306FF005DF111 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3DE8D6D424331153005DF111 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		461043F11846A328B187366B /* Pods-bbiosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bbiosTests.debug.xcconfig"; path = "Target Support Files/Pods-bbiosTests/Pods-bbiosTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6DB8594DC6311BE77E42E9D1 /* Pods_bbios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_bbios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		77F92568EBF823B9123D9087 /* Pods-bbios-bbiosUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bbios-bbiosUITests.debug.xcconfig"; path = "Target Support Files/Pods-bbios-bbiosUITests/Pods-bbios-bbiosUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -101,7 +103,6 @@
 				461043F11846A328B187366B /* Pods-bbiosTests.debug.xcconfig */,
 				F9F76EE74A46F2F82A542292 /* Pods-bbiosTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -136,6 +137,7 @@
 				3DE8D6AA243306FD005DF111 /* Main.storyboard */,
 				3DE8D6AD243306FF005DF111 /* Assets.xcassets */,
 				3DE8D6AF243306FF005DF111 /* LaunchScreen.storyboard */,
+				3DE8D6D424331153005DF111 /* GoogleService-Info.plist */,
 				3DE8D6B2243306FF005DF111 /* Info.plist */,
 			);
 			path = bbios;
@@ -279,6 +281,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3DE8D6B1243306FF005DF111 /* LaunchScreen.storyboard in Resources */,
+				3DE8D6D524331153005DF111 /* GoogleService-Info.plist in Resources */,
 				3DE8D6AE243306FF005DF111 /* Assets.xcassets in Resources */,
 				3DE8D6AC243306FD005DF111 /* Main.storyboard in Resources */,
 			);
