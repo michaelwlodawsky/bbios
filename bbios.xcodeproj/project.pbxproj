@@ -15,6 +15,9 @@
 		3DE8D6B1243306FF005DF111 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DE8D6AF243306FF005DF111 /* LaunchScreen.storyboard */; };
 		3DE8D6BC243306FF005DF111 /* bbiosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE8D6BB243306FF005DF111 /* bbiosTests.swift */; };
 		3DE8D6C7243306FF005DF111 /* bbiosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE8D6C6243306FF005DF111 /* bbiosUITests.swift */; };
+		4B8F275A080E9E4597CB15AC /* Pods_bbios_bbiosUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FA6C8EC1280AE541583C1A8 /* Pods_bbios_bbiosUITests.framework */; };
+		6E2F9B8F1A3316807F0634EF /* Pods_bbios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DB8594DC6311BE77E42E9D1 /* Pods_bbios.framework */; };
+		B71F8AE3DC3E96A40E3F5FC0 /* Pods_bbiosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E79F00B96DEADEC39F6A726D /* Pods_bbiosTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0FA6C8EC1280AE541583C1A8 /* Pods_bbios_bbiosUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_bbios_bbiosUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DE8D6A1243306FD005DF111 /* bbios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bbios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DE8D6A4243306FD005DF111 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3DE8D6A6243306FD005DF111 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +53,14 @@
 		3DE8D6C2243306FF005DF111 /* bbiosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = bbiosUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DE8D6C6243306FF005DF111 /* bbiosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bbiosUITests.swift; sourceTree = "<group>"; };
 		3DE8D6C8243306FF005DF111 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		461043F11846A328B187366B /* Pods-bbiosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bbiosTests.debug.xcconfig"; path = "Target Support Files/Pods-bbiosTests/Pods-bbiosTests.debug.xcconfig"; sourceTree = "<group>"; };
+		6DB8594DC6311BE77E42E9D1 /* Pods_bbios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_bbios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		77F92568EBF823B9123D9087 /* Pods-bbios-bbiosUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bbios-bbiosUITests.debug.xcconfig"; path = "Target Support Files/Pods-bbios-bbiosUITests/Pods-bbios-bbiosUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		AA2344CB148EB1D9D021E50F /* Pods-bbios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bbios.release.xcconfig"; path = "Target Support Files/Pods-bbios/Pods-bbios.release.xcconfig"; sourceTree = "<group>"; };
+		CF117A31DCAC62F0FFD350A9 /* Pods-bbios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bbios.debug.xcconfig"; path = "Target Support Files/Pods-bbios/Pods-bbios.debug.xcconfig"; sourceTree = "<group>"; };
+		CF92DCEC8C0977F9ABAF27DE /* Pods-bbios-bbiosUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bbios-bbiosUITests.release.xcconfig"; path = "Target Support Files/Pods-bbios-bbiosUITests/Pods-bbios-bbiosUITests.release.xcconfig"; sourceTree = "<group>"; };
+		E79F00B96DEADEC39F6A726D /* Pods_bbiosTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_bbiosTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9F76EE74A46F2F82A542292 /* Pods-bbiosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bbiosTests.release.xcconfig"; path = "Target Support Files/Pods-bbiosTests/Pods-bbiosTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E2F9B8F1A3316807F0634EF /* Pods_bbios.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B71F8AE3DC3E96A40E3F5FC0 /* Pods_bbiosTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +84,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B8F275A080E9E4597CB15AC /* Pods_bbios_bbiosUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		23AD43658E505393AE4B8E66 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CF117A31DCAC62F0FFD350A9 /* Pods-bbios.debug.xcconfig */,
+				AA2344CB148EB1D9D021E50F /* Pods-bbios.release.xcconfig */,
+				77F92568EBF823B9123D9087 /* Pods-bbios-bbiosUITests.debug.xcconfig */,
+				CF92DCEC8C0977F9ABAF27DE /* Pods-bbios-bbiosUITests.release.xcconfig */,
+				461043F11846A328B187366B /* Pods-bbiosTests.debug.xcconfig */,
+				F9F76EE74A46F2F82A542292 /* Pods-bbiosTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		3DE8D698243306FD005DF111 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +112,8 @@
 				3DE8D6BA243306FF005DF111 /* bbiosTests */,
 				3DE8D6C5243306FF005DF111 /* bbiosUITests */,
 				3DE8D6A2243306FD005DF111 /* Products */,
+				23AD43658E505393AE4B8E66 /* Pods */,
+				A49884EBA7C899E4841DB24E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -128,6 +159,16 @@
 			path = bbiosUITests;
 			sourceTree = "<group>";
 		};
+		A49884EBA7C899E4841DB24E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6DB8594DC6311BE77E42E9D1 /* Pods_bbios.framework */,
+				0FA6C8EC1280AE541583C1A8 /* Pods_bbios_bbiosUITests.framework */,
+				E79F00B96DEADEC39F6A726D /* Pods_bbiosTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +176,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3DE8D6CB243306FF005DF111 /* Build configuration list for PBXNativeTarget "bbios" */;
 			buildPhases = (
+				5F9A50EF9114B9579555FE60 /* [CP] Check Pods Manifest.lock */,
 				3DE8D69D243306FD005DF111 /* Sources */,
 				3DE8D69E243306FD005DF111 /* Frameworks */,
 				3DE8D69F243306FD005DF111 /* Resources */,
+				26CA9C44F28483A26739E48E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -152,6 +195,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3DE8D6CE243306FF005DF111 /* Build configuration list for PBXNativeTarget "bbiosTests" */;
 			buildPhases = (
+				6884B332DB8C47444A7766D5 /* [CP] Check Pods Manifest.lock */,
 				3DE8D6B3243306FF005DF111 /* Sources */,
 				3DE8D6B4243306FF005DF111 /* Frameworks */,
 				3DE8D6B5243306FF005DF111 /* Resources */,
@@ -170,9 +214,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3DE8D6D1243306FF005DF111 /* Build configuration list for PBXNativeTarget "bbiosUITests" */;
 			buildPhases = (
+				DC25ED67DB081768032478BE /* [CP] Check Pods Manifest.lock */,
 				3DE8D6BE243306FF005DF111 /* Sources */,
 				3DE8D6BF243306FF005DF111 /* Frameworks */,
 				3DE8D6C0243306FF005DF111 /* Resources */,
+				26953EFA261ADCFD767B9AE6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -253,6 +299,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		26953EFA261ADCFD767B9AE6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-bbios-bbiosUITests/Pods-bbios-bbiosUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-bbios-bbiosUITests/Pods-bbios-bbiosUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-bbios-bbiosUITests/Pods-bbios-bbiosUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		26CA9C44F28483A26739E48E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-bbios/Pods-bbios-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-bbios/Pods-bbios-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-bbios/Pods-bbios-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5F9A50EF9114B9579555FE60 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-bbios-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6884B332DB8C47444A7766D5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-bbiosTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DC25ED67DB081768032478BE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-bbios-bbiosUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3DE8D69D243306FD005DF111 /* Sources */ = {
@@ -432,6 +581,7 @@
 		};
 		3DE8D6CC243306FF005DF111 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CF117A31DCAC62F0FFD350A9 /* Pods-bbios.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -449,6 +599,7 @@
 		};
 		3DE8D6CD243306FF005DF111 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AA2344CB148EB1D9D021E50F /* Pods-bbios.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -466,6 +617,7 @@
 		};
 		3DE8D6CF243306FF005DF111 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 461043F11846A328B187366B /* Pods-bbiosTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -487,6 +639,7 @@
 		};
 		3DE8D6D0243306FF005DF111 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F9F76EE74A46F2F82A542292 /* Pods-bbiosTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -508,6 +661,7 @@
 		};
 		3DE8D6D2243306FF005DF111 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 77F92568EBF823B9123D9087 /* Pods-bbios-bbiosUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -527,6 +681,7 @@
 		};
 		3DE8D6D3243306FF005DF111 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CF92DCEC8C0977F9ABAF27DE /* Pods-bbios-bbiosUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

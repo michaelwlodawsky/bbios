@@ -1,0 +1,6 @@
+framework module Pods_bbiosTests {
+  umbrella header "Pods-bbiosTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
