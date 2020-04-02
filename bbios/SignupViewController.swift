@@ -9,7 +9,7 @@
 import UIKit
 import FirebaseAuth
 
-class ViewController: UIViewController {
+class SignupViewController: UIViewController {
     
     var email: BBTextField!
     var verifyEmail: BBTextField!
@@ -22,6 +22,7 @@ class ViewController: UIViewController {
         label.center = CGPoint(x: self.view.center.x, y: self.view.frame.height * 0.35)
         label.setText(text: "Welcome to Bento Box, please Sign-up!")
         self.view.addSubview(label)
+        
         // Initialize Text Fields
         email = BBTextField()
         email.center = CGPoint(x: self.view.center.x, y: self.view.frame.height * 0.5)
@@ -31,29 +32,20 @@ class ViewController: UIViewController {
         password = BBTextField()
         password.placeholder = "Password"
         password.isSecureTextEntry = true
-        setupSignupUI(fields: [email, verifyEmail, password])
+        
         // Signup Button
         let signupButton = BBButton()
-        signupButton.center = CGPoint(x: self.view.center.x,
-                                      y: password.center.y + password.frame.height + 25)
         signupButton.setTitle("Signup", for: .normal)
         signupButton.addTarget(self, action: #selector(onSignup), for: .touchUpInside)
-        self.view.addSubview(signupButton)
-    }
-    
-    func setupSignupUI(fields: [BBTextField]) {
-        var fields = fields
-        let startField: BBTextField = fields.removeFirst()
-        self.view.addSubview(startField)
-        let stepSize: CGFloat = 25.0
-        var startY = startField.center.y + startField.frame.height
-        for field in fields {
-            startY += stepSize
-            field.center = CGPoint(x: self.view.center.x,
-                                   y: startY)
-            self.view.addSubview(field)
-            startY += field.frame.height
-        }
+        
+        // Signin Button
+        let signinButton = BBButton()
+        signinButton.addTarget(self, action: #selector(onSignin), for: .touchUpInside)
+        signinButton.setTitleS2F(title: "Already a member? Sign in!", state: .normal)
+        // Set center after resize to avoid offsetting the center
+        self.view.addSubview(signinButton)
+        
+        Util.setupLinearUI(startView: email, subsequentViews: [verifyEmail, password, signupButton, signinButton], stepSize: 25.0, vc: self)
     }
     
     @objc func onSignup(sender: UIButton) {
@@ -65,7 +57,7 @@ class ViewController: UIViewController {
             if error != nil {
                 Alerts.singleChoiceAlert(title: "Error", message: "There was an error signing up with Firebase.", vc: self)
             } else {
-                print("All good in the hood :)")
+                print("All good in the hood for signup to Firebase :)")
                 
                 // Write user to profiles
                 db.collection("profiles").document(Auth.auth().currentUser?.uid ??
@@ -74,13 +66,17 @@ class ViewController: UIViewController {
                 ])
 
                 // Transition to next page
-                let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                let homeViewController = storyboard.instantiateViewController(identifier: "homeVC") as
-                    HomeViewController
+                let homeViewController = HomeViewController()
                 homeViewController.modalPresentationStyle = .fullScreen
                 self.present(homeViewController, animated: true, completion: nil)
             }
         }
+    }
+    
+    @objc func onSignin(sender: UIButton) {
+        let signinVC = SignInViewController()
+        signinVC.modalPresentationStyle = .fullScreen
+        self.present(signinVC, animated: true, completion: nil)
     }
 
 }

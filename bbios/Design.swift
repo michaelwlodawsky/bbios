@@ -8,6 +8,21 @@
 
 import UIKit
 
+class Util {
+    static func setupLinearUI(startView: UIView, subsequentViews: [UIView], stepSize: CGFloat, vc: UIViewController) {
+        let views = subsequentViews
+        vc.view.addSubview(startView)
+        var startY = startView.center.y + startView.frame.height
+        for view in views {
+            startY += stepSize
+            view.center = CGPoint(x: vc.view.center.x,
+                                   y: startY)
+            vc.view.addSubview(view)
+            startY += view.frame.height
+        }
+    }
+}
+
 class BBLabel: UILabel {
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -81,7 +96,13 @@ class BBButton: UIButton {
         self.setTitle("Button", for: .normal)
         self.setTitleColor(.blue, for: .normal)
         self.setTitleColor(.lightGray, for: .highlighted)
-        
+    }
+    
+    func setTitleS2F(title: String, state: UIControl.State) {
+        let center = self.center
+        setTitle(title, for: state)
+        self.sizeToFit()
+        self.center = center
     }
 }
 
