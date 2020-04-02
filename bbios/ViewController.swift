@@ -11,48 +11,60 @@ import FirebaseAuth
 
 class ViewController: UIViewController {
     
-    var email: UITextField!
-    var verifyEmail: UITextField!
-    var password: UITextField!
+    var email: BBTextField!
+    var verifyEmail: BBTextField!
+    var password: BBTextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Insert Greeting Label
+        let label = BBLabel()
+        label.center = CGPoint(x: self.view.center.x, y: self.view.frame.height * 0.35)
+        label.setText(text: "Welcome to Bento Box, please Sign-up!")
+        self.view.addSubview(label)
         // Initialize Text Fields
-        email = UITextField()
-        email.textAlignment = .center
-        email.placeholder = "example@email.com"
-        verifyEmail = UITextField()
-        verifyEmail.placeholder = "example@email.com"
-        password = UITextField()
-        password.placeholder = "password"
-        // Hide password input contents
-//        password.textContentType = .password
-        let signupButton = UIButton(frame: CGRect(x: 100, y: 40, width: 100, height: 50))
-        signupButton.isEnabled = true
-        signupButton.setTitle("signup", for: .normal)
-        signupButton.setTitleColor(.black, for: .normal)
+        email = BBTextField()
+        email.center = CGPoint(x: self.view.center.x, y: self.view.frame.height * 0.5)
+        email.placeholder = "Email"
+        verifyEmail = BBTextField()
+        verifyEmail.placeholder = "Verify Email"
+        password = BBTextField()
+        password.placeholder = "Password"
+        password.isSecureTextEntry = true
+        setupSignupUI(fields: [email, verifyEmail, password])
+        // Signup Button
+        let signupButton = BBButton()
+        signupButton.center = CGPoint(x: self.view.center.x,
+                                      y: password.center.y + password.frame.height + 25)
+        signupButton.setTitle("Signup", for: .normal)
         signupButton.addTarget(self, action: #selector(onSignup), for: .touchUpInside)
         self.view.addSubview(signupButton)
-        //setup UI
-        setupSignupUI(fields: [email, verifyEmail, password])
-
     }
     
-    func setupSignupUI(fields: [UITextField]) {
-        var yStart = self.view.frame.height * 0.25
-        for (index, field) in fields.enumerated() {
-            field.center.y = yStart
-            field.center.x = self.view.center.x
-            field.frame.size.height = 50
-            field.frame.size.width = self.view.frame.width * 0.5
+    func setupSignupUI(fields: [BBTextField]) {
+        var fields = fields
+        let startField: BBTextField = fields.removeFirst()
+        self.view.addSubview(startField)
+        let stepSize: CGFloat = 25.0
+        var startY = startField.center.y + startField.frame.height
+        for field in fields {
+            startY += stepSize
+            field.center = CGPoint(x: self.view.center.x,
+                                   y: startY)
             self.view.addSubview(field)
-            //iterate
-            yStart += 75
+            startY += field.frame.height
         }
     }
     
     @objc func onSignup(sender: UIButton) {
-        Auth.auth().createUser(withEmail: email.text!, password: password.text!, completion: nil)
+
+        Auth.auth().createUser(withEmail: email.text ?? "", password: password.text ?? "") { (result, error) in
+            if error != nil {
+                Alerts.singleChoiceAlert(title: "Error", message: "There was an error signing up with Firebase.", vc: self)
+            } else {
+                print("All good in the hood :)")
+            }
+        }
     }
 
 }
