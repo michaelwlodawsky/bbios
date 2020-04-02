@@ -57,12 +57,28 @@ class ViewController: UIViewController {
     }
     
     @objc func onSignup(sender: UIButton) {
-
+        if self.email.text != self.verifyEmail.text {
+            Alerts.singleChoiceAlert(title: "Error", message: "Emails do not match.", vc: self)
+            return
+        }
         Auth.auth().createUser(withEmail: email.text ?? "", password: password.text ?? "") { (result, error) in
             if error != nil {
                 Alerts.singleChoiceAlert(title: "Error", message: "There was an error signing up with Firebase.", vc: self)
             } else {
                 print("All good in the hood :)")
+                
+                // Write user to profiles
+                db.collection("profiles").document(Auth.auth().currentUser?.uid ??
+                    "errorCurrentUser").setData([
+                        "email": "\(self.email.text!)"
+                ])
+
+                // Transition to next page
+                let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                let homeViewController = storyboard.instantiateViewController(identifier: "homeVC") as
+                    HomeViewController
+                homeViewController.modalPresentationStyle = .fullScreen
+                self.present(homeViewController, animated: true, completion: nil)
             }
         }
     }

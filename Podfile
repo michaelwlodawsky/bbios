@@ -8,7 +8,8 @@ target 'bbios' do
   # Pods for bbios
 
   pod 'Firebase/Auth'
-
+  pod 'Firebase/Firestore'
+  pod 'FirebaseFirestoreSwift'
 
   target 'bbiosTests' do
     inherit! :search_paths
