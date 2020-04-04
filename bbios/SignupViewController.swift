@@ -17,6 +17,8 @@ class SignupViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = .white
+        self.navigationController?.navigationBar.isHidden = true
         // Insert Greeting Label
         let label = BBLabel()
         label.center = CGPoint(x: self.view.center.x, y: self.view.frame.height * 0.35)
@@ -66,17 +68,13 @@ class SignupViewController: UIViewController {
                 ])
 
                 // Transition to next page
-                let homeViewController = HomeViewController()
-                homeViewController.modalPresentationStyle = .fullScreen
-                self.present(homeViewController, animated: true, completion: nil)
+                self.navigationController?.pushViewController(HomeViewController(), animated: true)
             }
         }
     }
     
     @objc func onSignin(sender: UIButton) {
-        let signinVC = SignInViewController()
-        signinVC.modalPresentationStyle = .fullScreen
-        self.present(signinVC, animated: true, completion: nil)
+        self.navigationController?.pushViewController(SignInViewController(), animated: true)
     }
 
 }

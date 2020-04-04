@@ -17,7 +17,7 @@ class SignInViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .white
-
+        self.navigationController?.navigationBar.isHidden = false
         // Insert Greeting Label
         let label = BBLabel()
         label.center = CGPoint(x: self.view.center.x, y: self.view.frame.height * 0.35)
@@ -49,9 +49,7 @@ class SignInViewController: UIViewController {
             } else {
                 print("Signin to Firebase was succesful :)")
                 // Transition to home page
-                let homeViewController = HomeViewController()
-                homeViewController.modalPresentationStyle = .fullScreen
-                self.present(homeViewController, animated: true, completion: nil)
+                self.navigationController?.pushViewController(HomeViewController(), animated: true)
             }
         }
     }
