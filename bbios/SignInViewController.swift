@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class SignInViewController: UIViewController {
     
@@ -42,10 +43,17 @@ class SignInViewController: UIViewController {
     @objc func onSignin(sender: UIButton) {
         print("We're ready to signin to Firebase :)")
         // TODO: Setup user signin for Firebase
-        // Transition to home page
-        let homeViewController = HomeViewController()
-        homeViewController.modalPresentationStyle = .fullScreen
-        self.present(homeViewController, animated: true, completion: nil)
+        Auth.auth().signIn(withEmail: email.text ?? "", password: password.text ?? "") { (result, error) in
+            if error != nil {
+                Alerts.singleChoiceAlert(title: "Error", message: "There was an error signing into Firebase", vc: self)
+            } else {
+                print("Signin to Firebase was succesful :)")
+                // Transition to home page
+                let homeViewController = HomeViewController()
+                homeViewController.modalPresentationStyle = .fullScreen
+                self.present(homeViewController, animated: true, completion: nil)
+            }
+        }
     }
 
 }
