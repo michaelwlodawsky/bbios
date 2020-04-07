@@ -11,6 +11,7 @@ import UIKit
 class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
+        super.viewDidLoad()
         // Setup Navigation Bar
         let navItem = UINavigationItem(title: "Home")
         let profileItem = UIBarButtonItem(title: "Profile", style: .plain, target: self, action: #selector(onProfile))
@@ -21,10 +22,7 @@ class HomeViewController: UIViewController {
         self.navigationItem.rightBarButtonItem = addOrderItem
         self.navigationItem.leftBarButtonItem = profileItem
 
-
-        
-        
-        super.viewDidLoad()
+        //Setup homepage
         self.view.backgroundColor = .white
         let label = BBLabel()
         label.center = self.view.center
@@ -39,8 +37,7 @@ class HomeViewController: UIViewController {
     }
     
     @objc func addOrder(sender: UIBarButtonItem) {
-        // TODO: Transition to Order Page
-        print("We here****")
+        self.navigationController?.pushViewController(OrderViewController(), animated: true)
     }
 
 }

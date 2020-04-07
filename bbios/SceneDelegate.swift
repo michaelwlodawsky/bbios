@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Firebase
+
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -21,8 +23,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
-        let mainVC = SignupViewController()
-        navigationController = UINavigationController(rootViewController: mainVC)
+        // Redirect to homepage if user is logged in
+        if Auth.auth().currentUser != nil {
+            navigationController = UINavigationController(rootViewController: HomeViewController())
+        } else {
+            navigationController = UINavigationController(rootViewController: SignupViewController())
+        }
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
     }
