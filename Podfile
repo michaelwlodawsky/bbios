@@ -10,7 +10,8 @@ target 'bbios' do
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
   pod 'FirebaseFirestoreSwift'
-
+  pod 'StripeTerminal', '1.1.0'
+  
   target 'bbiosTests' do
     inherit! :search_paths
     # Pods for testing

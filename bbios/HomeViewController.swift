@@ -13,14 +13,12 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Setup Navigation Bar
-        let navItem = UINavigationItem(title: "Home")
-        let profileItem = UIBarButtonItem(title: "Profile", style: .plain, target: self, action: #selector(onProfile))
-        let addOrderItem = UIBarButtonItem(barButtonSystemItem: .compose, target: self, action: #selector(addOrder))
-        navItem.rightBarButtonItem = addOrderItem
-        navItem.leftBarButtonItem = profileItem
-
-        self.navigationItem.rightBarButtonItem = addOrderItem
-        self.navigationItem.leftBarButtonItem = profileItem
+        let cartButton = Util.setupNavButton(imageName: "shopping_cart.png")
+        cartButton.addTarget(self, action: #selector(onCart), for: .touchUpInside)
+        let cartItem = UIBarButtonItem(customView: cartButton)
+        self.navigationItem.setRightBarButtonItems([cartItem], animated: false)
+        self.navigationController?.transparentNavBar()
+        self.navigationController?.navigationBar.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: 80)
 
         //Setup homepage
         self.view.backgroundColor = .white
@@ -36,7 +34,7 @@ class HomeViewController: UIViewController {
         Alerts.notImplementedAlert(functionalityDescription: "This feature is not yet implemented for Bento Box.", vc: self)
     }
     
-    @objc func addOrder(sender: UIBarButtonItem) {
+    @objc func onCart(sender: UIBarButtonItem) {
         self.navigationController?.pushViewController(OrderViewController(), animated: true)
     }
 

@@ -8,7 +8,17 @@
 
 import UIKit
 
+extension UINavigationController {
+    func transparentNavBar() {
+        self.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationBar.shadowImage = UIImage()
+        self.view.backgroundColor = .clear
+        self.navigationBar.isTranslucent = true
+    }
+}
+
 class Util {
+    
     static func setupLinearUI(startView: UIView, subsequentViews: [UIView], stepSize: CGFloat, vc: UIViewController) {
         let views = subsequentViews
         vc.view.addSubview(startView)
@@ -20,6 +30,24 @@ class Util {
             vc.view.addSubview(view)
             startY += view.frame.height
         }
+    }
+    
+    static func setupNavButton(imageName: String) -> UIButton {
+        let image = UIImage(named: imageName)
+        let button = UIButton(type: .custom)
+        button.setImage(image?.withRenderingMode(.alwaysTemplate), for: .normal)
+        button.tintColor = .lightGray
+        // Use anchors because Navigation Bar Items use autolayout
+        button.widthAnchor.constraint(equalToConstant: 40.0).isActive = true
+        button.heightAnchor.constraint(equalToConstant: 40.0).isActive = true
+        button.backgroundColor = .white
+        button.imageEdgeInsets = UIEdgeInsets(top: 2, left: 2, bottom: 2, right: 2)
+        button.layer.cornerRadius = 10
+        button.layer.shadowColor = UIColor.gray.cgColor
+        button.layer.shadowOffset = CGSize(width: 0, height: 3)
+        button.layer.shadowRadius = 2
+        button.layer.shadowOpacity = 0.75
+        return button
     }
 }
 
